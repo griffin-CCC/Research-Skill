@@ -1,0 +1,752 @@
+# Research OS 2.0
+## A State-Driven Self-Evolving Research Operating System
+
+Version: 2.0
+
+---
+
+# Vision
+
+Research OS is **not a paper-writing framework**.
+
+It is a cognitive operating system that continuously builds, updates, and refines a researcher's understanding of a scientific domain.
+
+Its purpose is not to generate papers.
+
+Its purpose is to continuously improve the **World Model**, enabling increasingly meaningful questions, stronger hypotheses, better experiments, and more impactful research contributions.
+
+---
+
+# Design Philosophy
+
+Research is not a workflow.
+
+Research is a dynamic system.
+
+Instead of:
+
+```
+Paper
+    ↓
+Idea
+    ↓
+Experiment
+```
+
+Research OS models research as:
+
+```
+State
+    ↓
+Reasoning
+    ↓
+Decision
+    ↓
+Execution
+    ↓
+Evidence
+    ↓
+State Update
+```
+
+Everything is state-driven.
+
+---
+
+# System Architecture
+
+```
+                    +-------------------------+
+                    |     Memory Kernel       |
+                    +------------+------------+
+                                 |
+                                 |
+                    +------------v------------+
+                    |      World Model        |
+                    +------------+------------+
+                                 |
+                +----------------+----------------+
+                |                                 |
+      +---------v---------+             +---------v---------+
+      | Reasoning Engine  |             | Planning Engine   |
+      +---------+---------+             +---------+---------+
+                |                                 |
+                +----------------+----------------+
+                                 |
+                      +----------v----------+
+                      | Execution Engine    |
+                      +----------+----------+
+                                 |
+                      +----------v----------+
+                      | Evaluation Engine   |
+                      +----------+----------+
+                                 |
+                      +----------v----------+
+                      | Scheduler           |
+                      +----------+----------+
+                                 |
+                                 |
+                      Update Memory & World Model
+```
+
+---
+
+# Core Design Principles
+
+## Principle 1
+
+Everything is a state.
+
+---
+
+## Principle 2
+
+Every action changes the state.
+
+---
+
+## Principle 3
+
+Every decision must be evidence-driven.
+
+---
+
+## Principle 4
+
+Every experiment updates the World Model.
+
+---
+
+## Principle 5
+
+Research is an infinite learning loop.
+
+---
+
+# Kernel
+
+The Memory Kernel is the foundation of the entire operating system.
+
+It stores every object generated during research.
+
+Nothing is discarded.
+
+Everything becomes reusable knowledge.
+
+---
+
+# Core Objects (Schema)
+
+Every object follows a unified schema.
+
+---
+
+## Paper
+
+```yaml
+id:
+title:
+authors:
+year:
+problem:
+method:
+assumptions:
+strengths:
+weaknesses:
+evidence:
+limitations:
+open_questions:
+references:
+confidence:
+```
+
+---
+
+## Problem
+
+```yaml
+id:
+description:
+importance:
+domain:
+difficulty:
+known_methods:
+known_limitations:
+related_problems:
+confidence:
+```
+
+---
+
+## Gap
+
+```yaml
+id:
+source:
+description:
+root_cause:
+importance:
+novelty:
+difficulty:
+evidence:
+confidence:
+```
+
+---
+
+## Hypothesis
+
+```yaml
+id:
+statement:
+motivation:
+supporting_evidence:
+contradicting_evidence:
+confidence:
+status:
+```
+
+Status
+
+- Proposed
+- Testing
+- Supported
+- Rejected
+- Archived
+
+---
+
+## Idea
+
+```yaml
+id:
+description:
+target_gap:
+target_hypothesis:
+expected_contribution:
+feasibility:
+novelty:
+risk:
+priority:
+status:
+```
+
+---
+
+## Experiment
+
+```yaml
+id:
+research_question:
+variables:
+baseline:
+protocol:
+metrics:
+expected_result:
+actual_result:
+conclusion:
+confidence:
+```
+
+---
+
+## Evidence
+
+```yaml
+id:
+source:
+type:
+supports:
+contradicts:
+quality:
+confidence:
+```
+
+---
+
+## Decision
+
+```yaml
+id:
+reason:
+action:
+target:
+timestamp:
+confidence:
+```
+
+---
+
+# State Machine
+
+Every research project exists in one state.
+
+```
+Knowledge Collection
+
+↓
+
+Landscape Modeling
+
+↓
+
+Gap Discovery
+
+↓
+
+Hypothesis Building
+
+↓
+
+Idea Generation
+
+↓
+
+Idea Evaluation
+
+↓
+
+Experiment Design
+
+↓
+
+Experiment Running
+
+↓
+
+Evidence Collection
+
+↓
+
+Reviewer Simulation
+
+↓
+
+Decision
+
+↓
+
+Knowledge Update
+
+↓
+
+Repeat
+```
+
+A project can move forward or backward.
+
+Research is not linear.
+
+---
+
+# Memory Kernel
+
+The Memory Kernel maintains long-term memory.
+
+It stores
+
+- Papers
+- Concepts
+- Ideas
+- Experiments
+- Failures
+- Reviewer comments
+- Decisions
+- Lessons learned
+- Research history
+
+Nothing should be regenerated if it already exists.
+
+---
+
+# World Model
+
+The World Model represents the current understanding of a research field.
+
+It contains
+
+## Problem Space
+
+Known research problems.
+
+---
+
+## Solution Space
+
+Existing methods.
+
+---
+
+## Assumption Space
+
+Assumptions behind existing methods.
+
+---
+
+## Failure Space
+
+Known failure cases.
+
+---
+
+## Evidence Space
+
+Evidence supporting current beliefs.
+
+---
+
+## Unknown Space
+
+Questions that remain unanswered.
+
+---
+
+Every node stores
+
+- Confidence
+- Supporting Evidence
+- Contradicting Evidence
+- Last Updated
+- Source
+
+The World Model evolves after every iteration.
+
+---
+
+# Reasoning Engine
+
+Responsibilities
+
+- Analyze literature
+- Detect assumptions
+- Discover contradictions
+- Explain failures
+- Infer root causes
+- Update beliefs
+
+Output
+
+- Problems
+- Gaps
+- Root Causes
+- Hypotheses
+
+---
+
+# Planning Engine
+
+Responsibilities
+
+Select the next best action.
+
+Possible actions
+
+- Read more papers
+- Generate ideas
+- Design experiments
+- Run validation
+- Analyze failures
+- Simplify methods
+- Pivot direction
+- Prepare submission
+
+Planning is based on current state.
+
+---
+
+# Execution Engine
+
+Executes research tasks.
+
+Examples
+
+- Literature review
+- Idea generation
+- Experiment planning
+- Code generation
+- Data analysis
+- Visualization
+- Ablation study
+- Benchmark evaluation
+
+Execution never changes the World Model directly.
+
+Only evidence does.
+
+---
+
+# Evaluation Engine
+
+Evaluates every research artifact.
+
+Evaluation dimensions
+
+## Novelty
+
+## Importance
+
+## Technical Quality
+
+## Evidence Quality
+
+## Reproducibility
+
+## Scalability
+
+## Practical Value
+
+## Scientific Value
+
+## Risk
+
+## Confidence
+
+Output
+
+Research Score
+
+---
+
+# Reviewer Engine
+
+Simulate reviewers.
+
+Questions
+
+- Is the contribution novel?
+- Is the evidence sufficient?
+- Is the comparison fair?
+- What assumptions are hidden?
+- Is the claim overstated?
+- What experiments are missing?
+- Would this survive rebuttal?
+
+Output
+
+Weakness Report
+
+Acceptance Probability
+
+Improvement Suggestions
+
+---
+
+# Scheduler
+
+The Scheduler determines what should happen next.
+
+Instead of fixed workflows.
+
+Decision examples
+
+IF
+
+Gap confidence is low
+
+THEN
+
+Read more literature
+
+---
+
+IF
+
+Hypothesis confidence is high
+
+THEN
+
+Generate ideas
+
+---
+
+IF
+
+Experiment contradicts hypothesis
+
+THEN
+
+Update World Model
+
+Generate new hypothesis
+
+---
+
+IF
+
+Evidence is sufficient
+
+THEN
+
+Run reviewer simulation
+
+---
+
+IF
+
+Reviewer score is acceptable
+
+THEN
+
+Prepare submission
+
+---
+
+The Scheduler makes Research OS adaptive.
+
+---
+
+# Confidence System
+
+Every object stores confidence.
+
+```
+0.0
+
+↓
+
+Unknown
+
+↓
+
+0.3
+
+↓
+
+Weak Evidence
+
+↓
+
+0.6
+
+↓
+
+Likely
+
+↓
+
+0.8
+
+↓
+
+Strong Evidence
+
+↓
+
+1.0
+
+↓
+
+Verified
+```
+
+Confidence changes after every experiment.
+
+Nothing is permanently true.
+
+---
+
+# Research Loop
+
+```
+Observe
+
+↓
+
+Collect Knowledge
+
+↓
+
+Update World Model
+
+↓
+
+Generate Questions
+
+↓
+
+Discover Gaps
+
+↓
+
+Analyze Root Causes
+
+↓
+
+Generate Hypotheses
+
+↓
+
+Generate Ideas
+
+↓
+
+Evaluate Ideas
+
+↓
+
+Plan Experiments
+
+↓
+
+Collect Evidence
+
+↓
+
+Reviewer Simulation
+
+↓
+
+Decision
+
+↓
+
+Update Memory
+
+↓
+
+Update World Model
+
+↓
+
+Repeat
+```
+
+Research continuously improves the World Model.
+
+---
+
+# Research Objectives
+
+Research contributions may include
+
+- New Problems
+- New Insights
+- New Theories
+- New Algorithms
+- New Architectures
+- New Training Strategies
+- New Optimization Methods
+- New Inference Methods
+- New Benchmarks
+- New Datasets
+- New Evaluation Metrics
+- New Systems
+- New Applications
+
+The operating system is domain-independent.
+
+---
+
+# Mission Statement
+
+Research OS 2.0 is a state-driven, evidence-based, self-evolving cognitive operating system.
+
+Its mission is not to maximize publications.
+
+Its mission is to maximize understanding.
+
+Better understanding produces better questions.
+
+Better questions produce better research.
+
+Better research produces meaningful scientific progress.
