@@ -1,0 +1,801 @@
+# Research OS v4
+### Self-Evolving Research Operating System
+> **Version:** v4.0
+> **Purpose:** A universal research operating system for discovering, evaluating, validating, and evolving research contributions in any scientific discipline.
+
+---
+
+# Philosophy
+
+Research is **not** a linear process.
+
+It is an iterative process of continuously improving one's understanding of the world.
+
+The objective of Research OS is therefore **not to generate papers**, but to continuously evolve a **World Model** that becomes increasingly capable of identifying meaningful research opportunities.
+
+Every paper, experiment, discussion, reviewer comment, or failure updates this World Model.
+
+---
+
+# Core Principle
+
+```text
+Reality
+    │
+    ▼
+Observation
+    │
+    ▼
+Knowledge
+    │
+    ▼
+World Model
+    │
+    ▼
+Question
+    │
+    ▼
+Hypothesis
+    │
+    ▼
+Solution
+    │
+    ▼
+Evidence
+    │
+    ▼
+Validation
+    │
+    ▼
+World Model Update
+```
+
+Research never ends.
+
+Each iteration makes the World Model more complete.
+
+---
+
+# System Architecture
+
+```
+                     ┌──────────────────────────────┐
+                     │      WORLD MODEL (Core)      │
+                     └──────────────┬───────────────┘
+                                    │
+        ┌───────────────┬───────────┼──────────────┬───────────────┐
+        ▼               ▼           ▼              ▼               ▼
+ Knowledge Hub   Reasoning Hub  Idea Engine  Experiment Hub  Review Hub
+        │               │           │              │               │
+        └───────────────┴───────────┴──────────────┴───────────────┘
+                                    │
+                           Decision Engine
+                                    │
+                           World Model Update
+```
+
+The World Model is the only permanent state.
+
+Everything else exists to improve it.
+
+---
+
+# Core Components
+
+---
+
+# 1. Knowledge Hub
+
+## Goal
+
+Build structured knowledge instead of collecting papers.
+
+---
+
+## Inputs
+
+- Papers
+- Books
+- Surveys
+- Benchmarks
+- Datasets
+- Code
+- Technical Reports
+- Patents
+- Blogs
+- Discussions
+
+---
+
+## Tasks
+
+Extract
+
+- Concepts
+- Problems
+- Methods
+- Assumptions
+- Strengths
+- Weaknesses
+- Evidence
+- Open Questions
+
+---
+
+## Outputs
+
+Knowledge Graph
+
+Instead of
+
+```
+Paper Summary
+```
+
+Produce
+
+```
+Problem
+
+↓
+
+Method
+
+↓
+
+Assumption
+
+↓
+
+Evidence
+
+↓
+
+Limitation
+```
+
+---
+
+# 2. World Model
+
+## Goal
+
+Maintain a continuously evolving understanding of the research field.
+
+The World Model contains
+
+### Problem Space
+
+What problems exist?
+
+---
+
+### Solution Space
+
+How have researchers solved them?
+
+---
+
+### Assumption Space
+
+What assumptions does every method rely on?
+
+---
+
+### Failure Space
+
+When do methods fail?
+
+---
+
+### Evidence Space
+
+What evidence supports current beliefs?
+
+---
+
+### Unknown Space
+
+What remains unexplained?
+
+---
+
+The World Model is updated after every iteration.
+
+---
+
+# 3. Question Engine
+
+Research begins with questions.
+
+Not ideas.
+
+Generate questions such as
+
+- Why?
+- Why not?
+- What if?
+- Under what conditions?
+- What assumptions are violated?
+- What has never been tested?
+- What evidence is missing?
+- What contradicts current understanding?
+
+Output
+
+Question Pool
+
+---
+
+# 4. Gap Discovery Engine
+
+Locate research opportunities.
+
+Sources include
+
+## Explicit Limitations
+
+Mentioned by authors.
+
+---
+
+## Implicit Assumptions
+
+Unspoken assumptions.
+
+---
+
+## Failure Cases
+
+Where methods break.
+
+---
+
+## Contradictions
+
+Different papers disagree.
+
+---
+
+## Missing Dimensions
+
+Missing
+
+- tasks
+- datasets
+- theory
+- evaluation
+- applications
+- workflows
+
+---
+
+## Emerging Trends
+
+New technologies creating new opportunities.
+
+---
+
+Output
+
+Gap List
+
+---
+
+# 5. Root Cause Engine
+
+Convert symptoms into causes.
+
+Never stop at
+
+> Performance drops.
+
+Instead ask repeatedly
+
+Why?
+
+Methods
+
+- Five Whys
+- Causal Graph
+- Counterfactual Analysis
+- Mechanism Analysis
+- Comparative Analysis
+
+Output
+
+Root Cause Statement
+
+---
+
+# 6. Hypothesis Engine
+
+Generate scientific hypotheses.
+
+Every hypothesis should follow
+
+```
+If ...
+
+Then ...
+
+Because ...
+```
+
+Example
+
+```
+If degradation is spatially heterogeneous,
+
+then global prompts should be insufficient,
+
+because different regions require different representations.
+```
+
+Generate multiple competing hypotheses.
+
+Never assume only one explanation.
+
+---
+
+# 7. Idea Generator
+
+Generate candidate solutions.
+
+Possible contribution categories
+
+## Algorithm
+
+## Architecture
+
+## Training
+
+## Optimization
+
+## Inference
+
+## Theory
+
+## Benchmark
+
+## Dataset
+
+## Evaluation
+
+## Workflow
+
+## System
+
+## Human-AI Collaboration
+
+## Application
+
+Every idea must explicitly answer
+
+Why should this solve the root cause?
+
+Output
+
+Idea Pool
+
+---
+
+# 8. Contribution Evaluator
+
+Evaluate every idea.
+
+Criteria
+
+## Novelty
+
+Is it genuinely new?
+
+---
+
+## Importance
+
+Does it solve an important problem?
+
+---
+
+## Evidence Potential
+
+Can it be convincingly verified?
+
+---
+
+## Feasibility
+
+Can available resources support it?
+
+---
+
+## Scalability
+
+Can it generalize?
+
+---
+
+## Practical Value
+
+Will anyone care?
+
+---
+
+## Scientific Value
+
+Does it advance understanding?
+
+Output
+
+Ranked Idea List
+
+---
+
+# 9. Experiment Designer
+
+Automatically construct validation plans.
+
+Design
+
+Research Question
+
+↓
+
+Hypothesis
+
+↓
+
+Variables
+
+↓
+
+Baseline
+
+↓
+
+Metrics
+
+↓
+
+Protocols
+
+↓
+
+Expected Results
+
+Generate
+
+- Main experiments
+- Ablations
+- Visualization
+- Robustness
+- Complexity
+- Generalization
+- Statistical Analysis
+- Failure Analysis
+
+Output
+
+Experiment Matrix
+
+---
+
+# 10. Evidence Engine
+
+Collect evidence.
+
+Evidence categories
+
+## Quantitative
+
+Performance
+
+Accuracy
+
+Efficiency
+
+---
+
+## Qualitative
+
+Visualization
+
+Case Study
+
+User Study
+
+Expert Evaluation
+
+---
+
+## Theoretical
+
+Proof
+
+Analysis
+
+Complexity
+
+---
+
+## Practical
+
+Deployment
+
+Scalability
+
+Real-world performance
+
+Output
+
+Evidence Matrix
+
+---
+
+# 11. Reviewer Simulator
+
+Become the harshest reviewer.
+
+Questions
+
+Is it new?
+
+Why?
+
+Where is the evidence?
+
+Is the comparison fair?
+
+What assumptions are hidden?
+
+Is the claim overstated?
+
+Could a simpler method achieve this?
+
+What would reject this paper?
+
+Output
+
+Weakness Report
+
+---
+
+# 12. Decision Engine
+
+Determine the next action.
+
+Possible actions
+
+Continue
+
+Iterate
+
+Simplify
+
+Pivot
+
+Merge
+
+Abandon
+
+Publish
+
+Decision should be evidence-driven.
+
+---
+
+# 13. Memory Engine
+
+Maintain long-term research memory.
+
+Remember
+
+Failed ideas
+
+Successful ideas
+
+Useful experiments
+
+Reviewer comments
+
+Lessons learned
+
+Knowledge evolution
+
+Avoid repeating mistakes.
+
+---
+
+# 14. Evolution Engine
+
+The heart of Research OS.
+
+After every iteration
+
+Update
+
+Knowledge
+
+↓
+
+Update
+
+World Model
+
+↓
+
+Generate
+
+New Questions
+
+↓
+
+Generate
+
+New Gaps
+
+↓
+
+Generate
+
+Better Hypotheses
+
+↓
+
+Generate
+
+Better Ideas
+
+↓
+
+Repeat
+
+Research becomes progressively stronger.
+
+---
+
+# Research Loop
+
+```text
+Observe
+    │
+Learn
+    │
+Model
+    │
+Question
+    │
+Discover Gap
+    │
+Analyze Cause
+    │
+Generate Hypothesis
+    │
+Generate Ideas
+    │
+Evaluate
+    │
+Design Experiment
+    │
+Collect Evidence
+    │
+Reviewer Simulation
+    │
+Decision
+    │
+Update World Model
+    │
+Repeat
+```
+
+---
+
+# Universal Contribution Categories
+
+Every research contribution belongs to one or more of the following:
+
+- Problem Definition
+- Insight
+- Theory
+- Algorithm
+- Architecture
+- Training Strategy
+- Optimization
+- Inference
+- Benchmark
+- Dataset
+- Evaluation Metric
+- Workflow
+- System
+- Application
+- Human-AI Collaboration
+
+Contribution is not limited to proposing a new model.
+
+---
+
+# Universal Evaluation Criteria
+
+Every contribution should answer
+
+1. What problem is solved?
+2. Why does this problem matter?
+3. Why do existing methods fail?
+4. What is the root cause?
+5. What is the key insight?
+6. Why should the proposed solution work?
+7. What evidence supports it?
+8. Can it generalize?
+9. Can others reproduce it?
+10. What would a reviewer criticize?
+
+---
+
+# Research Principles
+
+## Principle 1
+
+Never start from a method.
+
+Start from a problem.
+
+---
+
+## Principle 2
+
+Never optimize symptoms.
+
+Identify the root cause.
+
+---
+
+## Principle 3
+
+Never trust intuition alone.
+
+Demand evidence.
+
+---
+
+## Principle 4
+
+Never stop after one hypothesis.
+
+Generate competing explanations.
+
+---
+
+## Principle 5
+
+Never design experiments to confirm yourself.
+
+Design experiments that could prove you wrong.
+
+---
+
+## Principle 6
+
+Every experiment updates the World Model.
+
+Research is cumulative.
+
+---
+
+## Principle 7
+
+A paper is not the goal.
+
+A better understanding of reality is the goal.
+
+Papers are only milestones in that process.
+
+---
+
+# Mission Statement
+
+Research OS is not a paper-writing framework.
+
+It is a self-evolving cognitive operating system for scientific discovery.
+
+Its mission is to continuously improve the researcher's World Model, enabling increasingly meaningful questions, stronger hypotheses, better evidence, and more impactful scientific contributions over time.
