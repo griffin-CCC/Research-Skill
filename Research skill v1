@@ -1,0 +1,370 @@
+# 如何寻找论文创新点（Innovation Playbook）
+
+> **创新不是“为了新而新”，而是找到已有方法的不足，并提出有效的解决方案。**
+>
+> 一个好的创新可以抽象为：
+>
+> **Problem → Insight → Method → Evidence → Contribution**
+
+---
+
+# 一、创新点主要来源（Where）
+
+## 1. 架构创新（Architecture）
+
+通过修改模型结构解决已有模型存在的问题，是最常见的创新来源。
+
+### Backbone设计
+
+- 更换Backbone（CNN / Transformer / Mamba / State Space等）
+- 修改Block结构
+- Pre-Norm / Post-Norm
+- Multi-Scale Architecture
+- Hierarchical Structure
+- Parallel Branch
+- Residual Connection
+- Dense Connection
+- Dynamic Network
+- Sparse Network
+
+### 特征交互
+
+- Token拼接
+- Token选择
+- Token压缩
+- Token Routing
+- Cross Attention
+- Self Attention改进
+- Multi-scale Fusion
+- Feature Fusion
+- Spatial-Channel Fusion
+- Frequency Fusion
+
+### 引入外部先验
+
+- Prompt
+- Condition
+- Memory
+- Prior
+- Knowledge
+- CLIP Feature
+- DINO Feature
+- SAM Feature
+- 文本信息
+- 医学先验
+- 时序信息
+
+### 新模块设计
+
+- Attention Module
+- Frequency Module
+- Gate Module
+- Adapter
+- MoE
+- Memory Module
+- Graph Module
+- Dynamic Module
+
+### 轻量化设计
+
+- Parameter Reduction
+- FLOPs Reduction
+- Quantization
+- Pruning
+- Distillation
+- Early Exit
+- Efficient Attention
+
+---
+
+## 2. Benchmark创新（Benchmark）
+
+创新并不一定来自模型，也可以来自整个研究范式。
+
+### 新数据集
+
+- 自建Dataset
+- 多中心数据
+- 大规模数据
+- 更真实场景
+- 更复杂退化
+
+### 新任务
+
+- 新Problem Definition
+- All-in-One
+- Multi-task
+- Cross-modal
+- Open-world
+- Agent任务
+- Few-shot / Zero-shot
+
+### 新评价体系
+
+- 新Metric
+- Task-aware Evaluation
+- Clinical Metric
+- Human Evaluation
+- Robustness Evaluation
+- Efficiency Evaluation
+
+### 更公平Benchmark
+
+- 统一训练策略
+- 统一数据处理
+- 统一评价协议
+- 重测所有SOTA
+
+---
+
+## 3. 新Insight（Insight）
+
+顶级论文最有价值的创新通常来自 **新的发现**。
+
+不是先设计模型，而是先回答：
+
+> **为什么已有方法失败？**
+
+### Insight来源
+
+#### Failure Case Analysis
+
+分析模型失败样例
+
+例如：
+
+- 为什么复杂场景效果下降？
+- 为什么泛化能力差？
+- 为什么容易过拟合？
+
+---
+
+#### Feature Visualization
+
+利用可视化寻找规律
+
+例如：
+
+- Attention Map
+- Feature Map
+- Frequency Response
+- Activation
+- Error Map
+- t-SNE
+- GradCAM
+
+---
+
+#### 理论分析
+
+例如：
+
+- Optimization
+- Gradient
+- Information Flow
+- Complexity
+- Convergence
+
+---
+
+#### Ablation Study
+
+通过大量消融实验发现规律。
+
+例如：
+
+- Attention越来越深反而下降
+- Prompt越来越大效果更差
+- 某模块几乎没有贡献
+
+---
+
+#### Data Analysis
+
+例如：
+
+- Distribution Shift
+- Long-tail
+- Noise Distribution
+- Domain Gap
+
+---
+
+## 4. 学习策略创新（Training）
+
+模型几乎不变，仅优化训练方式。
+
+例如：
+
+- Loss Function
+- Curriculum Learning
+- Knowledge Distillation
+- Teacher-Student
+- Self-supervised Learning
+- Semi-supervised Learning
+- Multi-stage Training
+- Progressive Learning
+- RL
+- Preference Optimization
+- Consistency Learning
+
+---
+
+## 5. 推理策略创新（Inference）
+
+优化模型推理阶段。
+
+例如：
+
+- Test-Time Adaptation
+- Test-Time Training
+- Self-Refinement
+- Iterative Refinement
+- Dynamic Routing
+- Early Exit
+- Cascade
+- Multi-step Reasoning
+- Agent Inference
+
+---
+
+## 6. 理论创新（Theory）
+
+从数学或理论角度解释模型。
+
+例如：
+
+- 新数学推导
+- Complexity Analysis
+- Convergence Proof
+- Error Bound
+- Information Bottleneck
+- Frequency Theory
+- Scaling Law
+
+---
+
+## 7. 系统创新（System）
+
+创新整个Pipeline，而不仅仅是某一个模块。
+
+例如：
+
+- End-to-End Framework
+- Agent System
+- Multi-Agent
+- Retrieval-Augmented Pipeline
+- Tool Calling
+- Human-in-the-loop
+- 自动化Workflow
+
+---
+
+## 8. 应用创新（Application）
+
+首次将已有技术应用到新的领域，并真正解决领域痛点。
+
+例如：
+
+- 医学AI
+- 遥感
+- 自动驾驶
+- 工业检测
+- 视频编辑
+- 机器人
+- 具身智能
+
+重点不是"换数据集"，而是：
+
+> **提出领域特有的问题，并设计对应解决方案。**
+
+---
+
+## 9. 效率创新（Efficiency）
+
+围绕计算资源进行优化。
+
+例如：
+
+- 更少参数
+- 更低FLOPs
+- 更少显存
+- 更快训练
+- 更快推理
+- 更低部署成本
+- 更低能耗
+
+---
+
+# 二、所有创新最终追求的目标（Why）
+
+无论创新来自架构、训练、理论还是Benchmark，其最终目标基本都可以归纳为以下几类。
+
+| 目标 | 说明 |
+|------|------|
+| **性能提升（Performance）** | 提高Accuracy、F1、PSNR、AUC等指标 |
+| **效率提升（Efficiency）** | 更快训练、更快推理、更少参数、更低FLOPs、更低显存 |
+| **泛化能力（Generalization）** | 更适应不同数据集、任务、模态和未知场景 |
+| **鲁棒性（Robustness）** | 对噪声、退化、遮挡、Domain Shift更加稳定 |
+| **可解释性（Interpretability）** | 更容易理解模型为什么有效 |
+| **训练优化（Optimization）** | 更稳定、更容易收敛、训练成本更低 |
+| **部署价值（Practicality）** | 更容易落地实际应用和工业部署 |
+| **理论贡献（Theory）** | 提供新的理论解释、设计原则或分析框架 |
+| **社区贡献（Community）** | 推动领域发展，如提出Benchmark、Dataset、Metric等 |
+
+---
+
+# 三、优秀论文的创新逻辑
+
+大部分优秀论文并不是只有一个创新，而是形成完整的创新链。
+
+```text
+观察实验现象
+        │
+        ▼
+发现已有方法的共同问题（Problem）
+        │
+        ▼
+深入分析原因（Insight）
+        │
+        ▼
+提出针对性的解决方案（Method）
+        │
+        ▼
+通过实验、消融、可视化、理论分析验证（Evidence）
+        │
+        ▼
+形成论文贡献（Contribution）
+```
+
+最终对应论文中的结构通常为：
+
+```text
+Problem
+    ↓
+Motivation
+    ↓
+Insight
+    ↓
+Method
+    ↓
+Experiment
+    ↓
+Conclusion
+```
+
+---
+
+# 四、一个优秀创新通常由哪些部分组成？
+
+真正有竞争力的论文，往往不是单一创新，而是多个创新来源共同支撑。
+
+例如：
+
+- Insight：发现已有方法存在新的关键问题
+- Architecture：设计针对性的网络结构
+- Training：提出新的训练策略
+- Theory：解释为什么方法有效
+- Benchmark：在多个任务和数据集充分验证
+
+> **Insight决定论文高度，Method决定论文质量，Experiment决定论文说服力。**
